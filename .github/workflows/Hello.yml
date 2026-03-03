@@ -5,11 +5,17 @@ name: My first workflow
 # Manual click (deliver) workflow whenever user needs
 
 on:
-
-  push:
-    branches: [main]
-    paths:
-      - '**.yml'
+    workflow_dispatch:
+      inputs:
+        environment:
+         description: This is the environment where index.html will get deployed
+         default: 'dev'
+         required: true
+         type: choice
+         options:
+          - dev
+          - prod
+          - stage
 
 jobs:
 
