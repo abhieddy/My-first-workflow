@@ -1,12 +1,15 @@
 # this is name of the workflow that will be displayed in the Actions Tab
 
-name: CICD
+name: My first workflow
 
 # Manual click (deliver) workflow whenever user needs
 
 on:
 
-  workflow_dispatch: 
+  push:
+    branches: [main]
+    paths:
+      -**.yml
 
 jobs:
 
