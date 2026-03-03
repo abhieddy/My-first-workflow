@@ -52,6 +52,7 @@ jobs:
         
 
   deploy:
+    if: inputs.environment=='dev'
 
     runs-on: ubuntu-latest
 
