@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
-        run: echo "code cloned from the git branch
+        run: echo "code cloned from the git branch"
   build:
     runs-on: ubuntu-latest
     steps:
