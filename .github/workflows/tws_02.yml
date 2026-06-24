@@ -5,7 +5,7 @@ on:
 
 jobs:
   details:
-    runs-on: ububtu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: details of the user
-        run: deocker --version && python --version
+        run: docker --version && python --version
