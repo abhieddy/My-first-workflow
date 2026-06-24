@@ -1,0 +1,11 @@
+name: Hello_2
+on:
+  push:
+    branches: [main]
+
+jobs:
+  details:
+    runs-on: ububtu-latest
+    steps:
+      - name: details of the user
+        run: deocker --version && python --version
