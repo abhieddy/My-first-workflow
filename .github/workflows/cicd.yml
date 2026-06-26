@@ -10,18 +10,21 @@ jobs:
       - name: checkout code
         run: echo "code cloned from the git branch"
   build:
+    needs: code
     runs-on: ubuntu-latest
     steps:
       - name: build the code
         run: echo "code build successfully"
 
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: code test is being done
         run: echo "testing is done"
 
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: code deployed to the server
