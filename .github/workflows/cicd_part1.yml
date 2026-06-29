@@ -1,7 +1,18 @@
 name: cicd-part1
 
-on:
+on: 
   workflow_dispatch:
+    inputs:
+      environment:
+        description: this is the environment value where worlflow runs
+        defult: 'dev'
+        required: true
+        type: choice
+        options:
+          - dev
+          - prod
+          - staging
+
 
 jobs:
   code:
