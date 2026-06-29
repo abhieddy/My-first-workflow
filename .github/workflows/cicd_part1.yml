@@ -3,29 +3,29 @@ name: cicd-part1
 on:
   workflow_dispatch:
 
-  jobs:
-    code:
-      runs-on: ubuntu-latest
-      steps:
-        - name: code checout
-          run: echo "code is got checkout"
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: code checout
+        run: echo "code is got checkout"
 
-    build:
-      runs-on: ubuntu-latest
-      steps:
-        - name: build code
-          run: echo "build is successful"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build code
+        run: echo "build is successful"
 
-    test:
-      runs-on: ubuntu-latest
-      steps:
-        - name: test the app
-          run: echo"test is successful"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test the app
+        run: echo "test is successful"
 
-    deploy:
-      runs-on: ubuntu-latest
-      steps:
-        - name: deploy the code
-          run: echo"deployment is done"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy the code
+        run: echo "deployment is done"
 
     
