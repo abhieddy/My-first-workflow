@@ -11,18 +11,21 @@ jobs:
         run: echo "code is got checkout"
 
   build:
+    needs: code
     runs-on: ubuntu-latest
     steps:
       - name: build code
         run: echo "build is successful"
 
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: test the app
         run: echo "test is successful"
 
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: deploy the code
